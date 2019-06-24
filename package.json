@@ -4,7 +4,7 @@
   "description": "all nodejs basic exapmles",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon basicServer.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/deshdeepakyadav/nodejs-example/issues"
   },
-  "homepage": "https://github.com/deshdeepakyadav/nodejs-example#readme"
+  "homepage": "https://github.com/deshdeepakyadav/nodejs-example#readme",
+  "dependencies": {
+    "nodemon": "^1.19.1"
+  }
 }
