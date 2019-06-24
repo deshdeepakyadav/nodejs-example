@@ -1,0 +1,19 @@
+{
+  "name": "node-basic",
+  "version": "1.0.0",
+  "description": "all nodejs basic exapmles",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deshdeepakyadav/nodejs-example.git"
+  },
+  "author": "Desh Deepak Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deshdeepakyadav/nodejs-example/issues"
+  },
+  "homepage": "https://github.com/deshdeepakyadav/nodejs-example#readme"
+}
