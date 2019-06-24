@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/deshdeepakyadav/nodejs-example#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "nodemon": "^1.19.1"
   }
 }
