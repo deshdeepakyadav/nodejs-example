@@ -5,7 +5,8 @@
   "main": "basic.js",
   "scripts": {
     "test": "nodemon basic.js",
-    "routetest": "nodemon apiRoute.js"
+    "routetest": "nodemon apiRoute.js",
+    "dev": "nodemon morganExample.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/deshdeepakyadav/nodejs-example#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "morgan": "^1.9.1",
     "nodemon": "^1.19.1"
   }
 }
