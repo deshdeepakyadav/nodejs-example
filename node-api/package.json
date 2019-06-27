@@ -4,7 +4,8 @@
   "description": "This is node API development example with express",
   "main": "basic.js",
   "scripts": {
-    "test": "nodemon basic.js"
+    "test": "nodemon basic.js",
+    "routetest": "nodemon apiRoute.js"
   },
   "repository": {
     "type": "git",
