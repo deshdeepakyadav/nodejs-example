@@ -1,0 +1,23 @@
+{
+  "name": "node-api",
+  "version": "1.0.0",
+  "description": "This is node API development example with express",
+  "main": "basic.js",
+  "scripts": {
+    "test": "nodemon basic.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deshdeepakyadav/nodejs-example.git"
+  },
+  "author": "Desh Deepak Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deshdeepakyadav/nodejs-example/issues"
+  },
+  "homepage": "https://github.com/deshdeepakyadav/nodejs-example#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1"
+  }
+}
