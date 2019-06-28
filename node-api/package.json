@@ -6,7 +6,8 @@
   "scripts": {
     "test": "nodemon basic.js",
     "routetest": "nodemon apiRoute.js",
-    "dev": "nodemon morganExample.js"
+    "devM": "nodemon morganExample.js",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
