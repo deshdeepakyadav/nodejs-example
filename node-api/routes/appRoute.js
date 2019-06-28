@@ -1,9 +1,11 @@
 const express = require('express');
 
-const appController = require('../controllers/appController');
+const {getResponse, getJSONResponse} = require('../controllers/appController');
 
 const router = express.Router();
 
-router.get("/", appController.getResponse);
+router.get("/", getResponse);
+
+router.get("/jsonData", getJSONResponse);
 
 module.exports = router;
