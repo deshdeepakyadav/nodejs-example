@@ -4,6 +4,21 @@ const app = express();
 
 const morgan = require('morgan');
 
+const mongoose = require('mongoose');
+
+const env = require('dotenv');
+env.config();
+
+mongoose.connect(process.env.DB_URL, { useNewUrlParser : true})
+.then(() => {
+    console.log(`DB Connected`);
+});
+
+mongoose.connection.on('error', err => {
+    console.log(`DB Connection error: ${err}`);
+});
+
+
 const appRoute = require('./routes/appRoute');
 
 const middleware = () => { 
@@ -16,6 +31,6 @@ app.use(morgan(middleware));
 
 app.use("/", appRoute);
 
-const port = 8080;
+const port = process.env.PORT || 8080;
 app.listen(port , console.log(`This API is running on port: ${port}`)
 );
