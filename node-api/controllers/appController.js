@@ -1,4 +1,4 @@
-const Post = require('../models/appModels');
+const Author = require('../models/appModels');
 
 exports.getResponse = (req, res) => {
     res.send("API is running through controller route");
@@ -17,7 +17,19 @@ exports.getJSONResponse = (req, res) => {
 };
 
 exports.postAuthor = (req, res) => {
-   const post = new Post (req.body);
+   const post = new Author (req.body);
    console.log('CREATING AUTHOR', req.body );
+   post.save( (err, result) => {
+
+    if(err){
+        return res.status(400).json({
+            error: err
+        });
+    }
+
+    res.status(200).json({
+        post: result
+    })
+   });
    
 };
