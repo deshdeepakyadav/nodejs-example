@@ -18,6 +18,6 @@ exports.getJSONResponse = (req, res) => {
 
 exports.postAuthor = (req, res) => {
    const post = new Post (req.body);
-   console.log('CREATING AUTHOR', post );
+   console.log('CREATING AUTHOR', req.body );
    
 };

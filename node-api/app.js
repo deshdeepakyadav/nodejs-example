@@ -7,6 +7,9 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 
 const env = require('dotenv');
+
+const bodyParser = require('body-parser');
+
 env.config();
 
 mongoose.connect(process.env.DB_URL, { useNewUrlParser : true})
@@ -28,7 +31,7 @@ const middleware = () => {
 
 app.use(morgan('dev'));
 app.use(morgan(middleware));
-
+app.use(bodyParser.json());
 app.use("/", appRoute);
 
 const port = process.env.PORT || 8080;
