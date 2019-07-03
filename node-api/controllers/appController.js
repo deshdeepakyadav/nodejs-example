@@ -6,14 +6,18 @@ exports.getResponse = (req, res) => {
 
 
 exports.getJSONResponse = (req, res) => {
-    res.json({
-        "Author" : [
-            {
-                "Name" : "Desh",
-                "Address": "Redmond"
-            }
-        ]
-    });
+    const authors = Author.find().select("_id name address").
+                            then((authors) => {
+                                res.status(200).json({'Authors' : authors})
+                            }).catch( err => console.log(err));
+    // res.json({
+    //     "Author" : [
+    //         {
+    //             "Name" : "Desh",
+    //             "Address": "Redmond"
+    //         }
+    //     ]
+    // });
 };
 
 exports.postAuthor = (req, res) => {
