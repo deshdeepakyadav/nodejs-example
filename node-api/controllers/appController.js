@@ -19,6 +19,11 @@ exports.getJSONResponse = (req, res) => {
 exports.postAuthor = (req, res) => {
    const post = new Author (req.body);
    console.log('CREATING AUTHOR', req.body );
+//    post.save().then(result => {
+//        res.status(200).json({
+//            post: result
+//        });
+//    });
    post.save( (err, result) => {
 
     if(err){

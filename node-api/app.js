@@ -10,6 +10,7 @@ const env = require('dotenv');
 
 const bodyParser = require('body-parser');
 
+
 env.config();
 
 mongoose.connect(process.env.DB_URL, { useNewUrlParser : true})
@@ -29,6 +30,7 @@ const middleware = () => {
 }
 
 
+// All Middleware
 app.use(morgan('dev'));
 app.use(morgan(middleware));
 app.use(bodyParser.json());
